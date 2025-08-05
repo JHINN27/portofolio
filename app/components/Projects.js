@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ExternalLink, Github, Play, ArrowRight } from 'lucide-react'
+import Image from 'next/image'
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(0)
@@ -190,11 +191,19 @@ export default function Projects() {
                 >
                 
                   <div className="relative h-64 overflow-hidden rounded-t-2xl">
-                      <img 
+                      {/* <Img 
                         src={projects[selectedProject].image}
                         alt={projects[selectedProject].title}
                         className="w-full h-full object-cover"
+                      /> */}
+                      <Image
+                        src={projects[selectedProject].image}
+                        alt={projects[selectedProject].title}
+                        className="object-cover"
+                        width={1000}
+                        height={10}
                       />
+
                     
                       <div className={`absolute inset-0 bg-gradient-to-t ${getColorClasses(projects[selectedProject].color).gradient} opacity-40`} />
                   </div>

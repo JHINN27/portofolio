@@ -75,7 +75,7 @@ export default function Hero() {
           transition={{ delay: 0.2 }}
           className="text-lg text-blue-400 mb-4 font-light tracking-wider"
         >
-          Hello, I'm
+          Hello, I&apos;m
         </motion.p>
 
         {/* Main title dengan stagger animation */}

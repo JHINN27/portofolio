@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { Code2, Palette, Zap, Heart } from 'lucide-react'
 import Image from 'next/image'
 
+
 export default function About() {
   const containerRef = useRef(null)
   const { scrollYProgress } = useScroll({
@@ -137,11 +138,12 @@ export default function About() {
                 className="relative"
               >
                 <div className="w-80 h-80 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl overflow-hidden border border-white/10">
-                    <img 
-                      src="/Images/profile.jpg" // ganti dengan path fotomu
-                      alt="Profile Photo"
-                      className="w-full h-full object-cover"
-                    />
+                   <Image
+                    src="/Images/profile.jpg" // ganti dengan path fotomu
+                    alt="Profile Photo"
+                    width={1000}
+                    height={50}
+                   />
                   </div>
 
                 {/* Floating elements */}
